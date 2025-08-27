@@ -83,7 +83,7 @@ alias dec='cal -m 12'
 
 	alias gm='git merge'
 
-	alias gpull='git push'
+	alias gpush='git push'
 
 	alias gf='git fetch'
 
