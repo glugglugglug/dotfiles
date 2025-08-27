@@ -8,8 +8,8 @@ set -o vi
 # ─── Vi Mode Prompt Indicators (Non-Deletable, Stylish) ──────
 bind 'set show-mode-in-prompt on'
 bind 'set show-mode-in-prompt on'
-bind 'set vi-ins-mode-string \1\[\e[1;32m+insert>>\e[0m\] '
-bind 'set vi-cmd-mode-string \1\[\e[0;33m*normal>>\e[0m\] '
+bind 'set vi-ins-mode-string \1\[\e[1;32m+ins>>\e[0m\] '
+bind 'set vi-cmd-mode-string \1\[\e[0;33m*norm>>\e[0m\] '
 
 # ─── Prompt (Clean, Colorful, Git-Friendly if Desired) ───────
 # Only shows user@host:path with color
@@ -30,7 +30,8 @@ HISTFILESIZE=20000
 # ─── Reload Message ───────────────────────────────────────────
 echo -e "\e[1;33m[VIM-style Bash initialized. Press ESC for NORMAL mode.]\e[0m"
 
-
+# fixing prompt size
+PROMPT_DIRTRIM=2
 #Aliases XD
 
 alias ll='ls -lah'
