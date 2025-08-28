@@ -30,7 +30,7 @@ HISTFILESIZE=20000
 echo -e "\e[1;33m[VIM-style Bash initialized. Press ESC for NORMAL mode.]\e[0m"
 
 # fixing prompt size
-PROMPT_DIRTRIM=2
+PROMPT_DIRTRIM=1
 #Aliases XD
 
 alias ll='ls -lah'
