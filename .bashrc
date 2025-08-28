@@ -7,7 +7,6 @@ set -o vi
 
 # ─── Vi Mode Prompt Indicators (Non-Deletable, Stylish) ──────
 bind 'set show-mode-in-prompt on'
-bind 'set show-mode-in-prompt on'
 bind 'set vi-ins-mode-string \1\[\e[1;32m+ins>>\e[0m\] '
 bind 'set vi-cmd-mode-string \1\[\e[0;33m*norm>>\e[0m\] '
 
