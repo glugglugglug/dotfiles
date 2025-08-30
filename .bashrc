@@ -37,6 +37,8 @@ alias ll='ls -lah'
 
 alias mss='cd "/mnt/c/Users/Shloka/2025/missing sem stuff"'
 
+alias sh2025='cd /mnt/c/Users/Shloka/2025'
+
 alias please='sudo'
 
 alias nvim='nvim -u ~/init.vim'
