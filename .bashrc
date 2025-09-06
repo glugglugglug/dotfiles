@@ -41,8 +41,6 @@ alias sh2025='cd /mnt/c/Users/Shloka/2025'
 
 alias please='sudo'
 
-alias nvim='nvim -u ~/init.vim'
-
 alias localmss='cd "/tmp/missing_sem"'
 
 alias pyth='python3'
@@ -96,3 +94,7 @@ alias dec='cal -m 12'
 	alias gb='git checkout -b'
 
 
+source ~/.dotfiles/shell/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
