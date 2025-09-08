@@ -1,27 +1,28 @@
-require("nvim-tree").setup {
+return {
   view = {
-    width = 30,
-    side = "left",
-    preserve_window_proportions = true,
+    width = 50,
+    relativenumber = true,
   },
   renderer = {
-    highlight_git = true,
+    indent_markers = { enable = true },
     icons = {
-      show = {
-        file = true,
-        folder = true,
-        folder_arrow = true,
-        git = true,
+      glyphs = {
+        folder = {
+          arrow_closed = "",
+          arrow_open = "",
+        },
       },
     },
   },
+  actions = {
+    open_file = {
+      window_picker = { enable = false },
+    },
+  },
+  filters = {
+    custom = { ".DS_Store" },
+  },
+  git = {
+    ignore = false,
+  },
 }
-
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    local dir = vim.fn.argv(0)
-    if vim.fn.isdirectory(dir) == 1 then
-      vim.cmd("NvimTreeOpen")
-    end
-  end
-})

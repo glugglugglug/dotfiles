@@ -7,12 +7,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-  {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("nvim-tree").setup {}
-    end,
-  },
-})
+-- Dynamically require all plugin specs from lua/plugins/
+local plugin_specs = {}
+
+local plugin_dir = vim.fn.stdpath("config") .. "/lua/plugins"
+for _, file in ipairs(vim.fn.readdir(plugin_dir)) do
+  if file:match("%.lua$") then
+    local module_name = "plugins." .. file:gsub("%.lua$", "")
+    table.insert(plugin_specs, require(module_name))
+  end
+end
+
+require("lazy").setup(plugin_specs)
