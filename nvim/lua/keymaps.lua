@@ -1,5 +1,8 @@
 local map = vim.keymap.set
-vim.g.mapleader = " "
+
+vim.keymap.set("n", "<leader>ut", function()
+  require("theme").toggle()
+end, { desc = "Toggle colorscheme" })
 
 -- Disable Ex mode
 map("n", "Q", "<Nop>", { desc = "Disable Ex mode" })

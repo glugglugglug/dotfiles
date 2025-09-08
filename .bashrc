@@ -51,6 +51,8 @@ alias c='clear'
 
 alias tree='tree --dirsfirst -F'
 
+alias nvimdir='cd '~/.dotfiles/nvim''
+
 # View the calender by typing the first three letters of the month.
 
 alias jan='cal -m 01'
