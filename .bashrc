@@ -39,6 +39,8 @@ alias mss='cd "/mnt/c/Users/Shloka/2025/missing sem stuff"'
 
 alias sh2025='cd /mnt/c/Users/Shloka/2025'
 
+alias pythonfold='cd /mnt/c/Users/Shloka/2025/CLG/"SEMESTER 1"/PYTHON'
+
 alias please='sudo'
 
 alias localmss='cd "/tmp/missing_sem"'
