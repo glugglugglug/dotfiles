@@ -55,7 +55,7 @@ alias tree='tree --dirsfirst -F'
 
 alias nvimdir='cd '~/.dotfiles/nvim''
 
-alias perpyth='cd '/mnt/c/Users/Shloka/2025/"python stuff"''
+alias perpyth='cd /mnt/c/Users/Shloka/2025/"python stuff"'
 # View the calender by typing the first three letters of the month.
 
 alias jan='cal -m 01'
