@@ -41,3 +41,12 @@ keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file e
 keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })
 keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
 keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
+
+--telescope ?
+vim.keymap.set("n", "<leader>fb", ":Telescope file_browser<CR>", { desc = "📁 File Browser (cwd)" })
+vim.keymap.set("n", "<leader>fB", function()
+  require("telescope").extensions.file_browser.file_browser({
+    path = vim.fn.expand("%:p:h"),
+    select_buffer = true,
+  })
+end, { desc = "📁 File Browser (current file dir)" })

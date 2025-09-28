@@ -55,6 +55,8 @@ wk.setup({
 wk.add({
   { "<leader>e", group = "explorer" },
   { "<leader>f", group = "file" },
+  { "<leader>fb", name = "📁 File Browser (cwd)" },
+  { "<leader>fB", name = "📁 File Browser (current file dir)" },
   { "<leader>g", group = "git" },
   { "<leader>u", group = "ui" },
   { "<leader>p", group = "plugins" },
