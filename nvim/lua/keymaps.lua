@@ -50,3 +50,8 @@ vim.keymap.set("n", "<leader>fB", function()
     select_buffer = true,
   })
 end, { desc = "📁 File Browser (current file dir)" })
+
+--pylint wrap round edit
+vim.keymap.set("n", "<leader>dw", function()
+  vim.diagnostic.open_float(nil, { focusable = false, border = "rounded" })
+end, { desc = "🪶 Show diagnostic popup" })
